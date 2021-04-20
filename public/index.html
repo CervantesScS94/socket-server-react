@@ -34,17 +34,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script>
         // Socket del cliente
-        const socket = io('http://localhost:8080');
-        // socket.on('mensaje-bienvenido',(response) => {
-        //     console.log(response);
-        // })
-
-        // const dataCliente = {
-        //     mensaje:"HOLA MUNDO",
-        //     cliente:true
-        // }
-        
-        // socket.emit('mensaje-cliente', dataCliente);
+        const socket = io('https://react-socket-server-cscs.herokuapp.com/');
 
         // Referencias del DOM
         const formulario = document.querySelector('#mi-formulario');
