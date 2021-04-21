@@ -1,9 +1,16 @@
+//* =============================================================
+//*  Importar Modelos
+//* =============================================================
 const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
 const path = require('path');
 const Socket = require('./Socket');
+const cors = require('cors');
 
+//* =============================================================
+//*  Clase configuracion Servidor
+//* =============================================================
 class Server{
     constructor(){
         this.app = express();
@@ -20,6 +27,9 @@ class Server{
 
     middlewares(){
         this.app.use(express.static(path.resolve( __dirname,'../public')));
+        
+        // cors
+        this.app.use(cors());
     }
 
     // Incializar la aplicacion
